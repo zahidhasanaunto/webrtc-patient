@@ -5,6 +5,9 @@ import { environment } from '../../../environments/environment';
 
 const CALL_CONNECTING = 'CALL_CONNECTING'; // PUB
 const CALL_CONNECTED = 'CALL_CONNECTED'; // SUB
+const CALL_CANCELED = 'CALL_CANCELED'; // PUB
+const CALL_STARTED = 'CALL_STARTED'; // PUB
+const CALL_ENDED = 'CALL_ENDED'; // PUB+SUB
 const OFFER = 'OFFER'; // PUB
 const ANSWER = 'ANSWER'; // SUB
 const CANDIDATE = 'CANDIDATE'; // SUB
@@ -53,12 +56,36 @@ export class SocketService {
     });
   }
 
-  onCandidate(): Observable<any> {
+  onCallEnded(): Observable<any> {
     return Observable.create((observer) => {
-      this.socket.on(CANDIDATE, (data) => {
+      this.socket.on(CALL_ENDED, (data) => {
         observer.next(data);
       });
     });
+  }
+
+  onCandidate(): Observable<any> {
+    return Observable.create((observer) => {
+      this.socket.on(CALL_ENDED, (data) => {
+        observer.next(data);
+      });
+    });
+  }
+
+  callStarted() {
+    this.socket.emit(CALL_STARTED);
+  }
+
+  callEnded(doctorIdentifier: string, code: string) {
+    this.socket.emit(CALL_ENDED, {
+      doctorIdentifier,
+      userType: 'PATIENT',
+      code
+    });
+  }
+
+  callCanceled() {
+    this.socket.emit(CALL_CANCELED);
   }
 
   offer(doctorIdentifier: string, description: any) {

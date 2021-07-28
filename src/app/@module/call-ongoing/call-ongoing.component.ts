@@ -90,6 +90,20 @@ export class CallOngoingComponent implements OnInit, AfterViewInit {
     this.socketService.onCandidate().subscribe((data) => {
       this.onCandidate(data.description);
     });
+
+    this.socketService.onCallEnded().subscribe((data) => {
+      this.stopConsultation();
+    });
+  }
+
+  stopConsultation() {
+    console.log('STOP CONSULTATION');
+    // tslint:disable-next-line:no-unused-expression
+    this.localStream &&
+      this.localStream.getTracks().forEach((track) => track.stop());
+    // tslint:disable-next-line:no-unused-expression
+    this.remoteStream &&
+      this.remoteStream.getTracks().forEach((track) => track.stop());
   }
 
   onCandidate(description: any) {

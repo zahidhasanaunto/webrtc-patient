@@ -72,6 +72,7 @@ export class FirstAdviceComponent implements OnInit {
   }
 
   cancelConnect() {
+    this.socketService.callCanceled();
     clearTimeout(this.timer);
     this.sessionOpen = null;
   }
