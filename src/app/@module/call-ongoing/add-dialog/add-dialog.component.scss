@@ -1,0 +1,204 @@
+@import '../../../../mediaQuery.scss';
+$font-family: 'Inter', sans-serif;
+
+.popup-section {
+	width: 420px;
+	@include responsive(_phone) {
+		width: 67vw;
+	}
+}
+
+button {
+	font-family: $font-family;
+}
+
+.close-btn-top {
+	margin-right: -10px;
+}
+
+.popup-title {
+	color: #2c3a42;
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.save-btn {
+	width: 100%;
+	background: #2c3a42;
+	border-radius: 8px;
+	color: #ffffff;
+	text-align: center;
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 28px;
+	padding: 5px 0px;
+}
+
+.search-input {
+	position: relative;
+	input {
+		width: 376px;
+		padding: 12px 0 12px 44px;
+		background: #dee3e7;
+		border-radius: 4px;
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 16px;
+		color: #2c3a42;
+		@include responsive(_phone) {
+			width: 55vw;
+		}
+		&::placeholder {
+			color: #2c3a42;
+		}
+		&:focus {
+			border: 0px;
+			outline: 0px;
+		}
+		&:active {
+			border: 0px;
+			outline: 0px;
+		}
+	}
+	.icon {
+		position: absolute;
+		left: 16px;
+		top: 12px;
+	}
+}
+
+.madicine-name {
+	color: #2c3a42;
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 27px;
+	margin: 20px 0px;
+}
+
+.small-add-deduct-btn {
+	width: 25px;
+	height: 25px;
+	background: #f1f3f4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.check-text {
+	color: #646b78;
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 18px;
+	@include responsive(_phone) {
+		font-size: 12px;
+		line-height: 14px;
+	}
+}
+
+.count {
+	color: #646b78;
+	font-family: $font-family;
+}
+
+.line {
+	height: 1px;
+	background: #87939a;
+	width: 456px;
+	margin-left: -24px;
+	@include responsive(_phone) {
+		width: auto;
+		margin-left: 0px;
+	}
+}
+
+.medicine-key {
+	background: #ffffff;
+	border: 1px solid #bbc4ca;
+	box-sizing: border-box;
+	box-shadow: 0px 2px 4px rgb(0 0 0 / 5%);
+	border-radius: 8px;
+	padding: 7px 16px;
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: #2c3a42;
+}
+
+p {
+	font-family: $font-family;
+	color: #2c3a42;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.header-info {
+	color: #2c3a42;
+	font-family: $font-family;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.header-title {
+	color: #87939a;
+	font-size: 12px;
+	line-height: 15px;
+	margin-bottom: 10px;
+}
+
+.common-card {
+	background: #f9f9f9;
+	border-radius: 8px;
+	margin-top: 24px;
+	.common-title {
+		font-family: $font-family;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 16px;
+		color: #2c3a42;
+	}
+	.order-f {
+		p {
+			font-size: 10px;
+			line-height: 16px;
+			font-family: $font-family;
+			color: #87939a;
+			margin-right: 8px;
+		}
+	}
+	.other-notes {
+		color: #2c3a42;
+		font-size: 12px;
+		line-height: 16px;
+		font-family: $font-family;
+		margin-top: 15px;
+	}
+	.medicine-div {
+		margin-top: 15px;
+		.name {
+			font-size: 12px;
+			line-height: 16px;
+			color: #2c3a42;
+			font-family: $font-family;
+		}
+		.info {
+			font-size: 12px;
+			line-height: 16px;
+			font-family: $font-family;
+			color: #87939a;
+		}
+	}
+}

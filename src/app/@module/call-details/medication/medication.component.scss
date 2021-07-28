@@ -1,0 +1,25 @@
+$font-family: 'Inter', sans-serif;
+.medicine-name {
+	font-size: 12px;
+	line-height: 16px;
+	font-family: $font-family;
+	color: #2c3a42;
+}
+
+.medicine-info {
+	font-family: $font-family;
+	color: #87939a;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.add-custom-btn {
+	border: 1px solid #9ca3af;
+}
+
+.hover-effect {
+	transition: 0.3s all ease;
+	&:hover {
+		background: #d0d0d057;
+	}
+}

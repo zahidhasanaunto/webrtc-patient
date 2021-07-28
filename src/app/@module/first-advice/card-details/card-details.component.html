@@ -1,0 +1,45 @@
+<form [formGroup]="cardForm" class="popup-section">
+    <mat-dialog-content>
+        <header class="flex justify-between items-center">
+            <p class="text-xl">Enter Credit/Debit Card</p>
+            <button class="" mat-icon-button (click)="close()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </header>
+        <section>
+            <div class="my-2">
+                <label class="text-sm ">Card Number</label>
+                <div class="relative mt-1">
+                    <input type="text" class="w-full p-3 pl-12">
+                    <div class="absolute left-3 top-4">
+                        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.63623 2.1543H15.0371V13.6556H8.63623V2.1543Z" fill="#FF5F00" />
+                            <path
+                                d="M9.04256 7.90515C9.04256 5.56835 10.1398 3.49564 11.8264 2.15447C10.5869 1.17911 9.02229 0.589844 7.3154 0.589844C3.27152 0.589844 0 3.86136 0 7.90515C0 11.9488 3.27152 15.2205 7.3153 15.2205C9.0222 15.2205 10.5868 14.6312 11.8264 13.6557C10.1398 12.3349 9.04256 10.2419 9.04256 7.90515Z"
+                                fill="#EB001B" />
+                            <path
+                                d="M23.673 7.90515C23.673 11.9488 20.4015 15.2205 16.3577 15.2205C14.6508 15.2205 13.0862 14.6312 11.8467 13.6557C13.5536 12.3147 14.6306 10.2419 14.6306 7.90515C14.6306 5.56835 13.5332 3.49564 11.8467 2.15447C13.0861 1.17911 14.6508 0.589844 16.3577 0.589844C20.4015 0.589844 23.6731 3.88173 23.6731 7.90515H23.673Z"
+                                fill="#F79E1B" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="my-2 w-6/12 -mr-2">
+                    <label class="text-sm -mr-2">Expiry</label>
+                    <input type="date" class="w-full p-3 mt-1 -mr-2">
+                </div>
+                <div class="my-2 w-6/12 ml-2">
+                    <label class="text-sm ml-2 ">CVV</label>
+                    <input type="password" class="w-full p-3 mt-1 ml-2">
+                </div>
+            </div>
+
+        </section>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-raised-button class="btn-done" type="submit" (click)="onSubmit()">
+            Done
+        </button>
+    </mat-dialog-actions>
+</form>

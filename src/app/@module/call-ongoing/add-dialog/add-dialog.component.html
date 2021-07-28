@@ -1,0 +1,362 @@
+<section class="popup-section">
+    <mat-dialog-content>
+        <header class="flex justify-between items-center">
+            <p class="popup-title">{{pageTitle}}</p>
+            <button class="close-btn-top" mat-icon-button (click)="close()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </header>
+        <main *ngIf="data.mode === 'medication'">
+            <div class="search-input my-3">
+                <input type="text" placeholder="Search medicine">
+                <div class="icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z"
+                            stroke="#2C3A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M13.9996 13.9996L11.0996 11.0996" stroke="#2C3A42" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+
+            <h3 class="madicine-name mb-6">Amoxicillin</h3>
+            <section>
+                <div class="flex justify-between mb-3">
+                    <mat-checkbox color="primary"> <span class="check-text">Morning</span></mat-checkbox>
+                    <div class="flex items-center">
+                        <button matRipple class="small-add-deduct-btn mr-3" (click)="add()">
+                            <svg width="12" height="2" viewBox="0 0 12 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.666992 1H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <span class="count">1</span>
+                        <button matRipple class="small-add-deduct-btn ml-3" (click)="deduct()">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 0.666992V11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                                <path d="M0.666992 6H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-between mb-3">
+                    <mat-checkbox color="primary"> <span class="check-text">Afternoon</span></mat-checkbox>
+                    <div class="flex items-center">
+                        <button matRipple class="small-add-deduct-btn mr-3" (click)="add()">
+                            <svg width="12" height="2" viewBox="0 0 12 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.666992 1H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <span class="count">1</span>
+                        <button matRipple class="small-add-deduct-btn ml-3" (click)="deduct()">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 0.666992V11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                                <path d="M0.666992 6H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-between mb-3">
+                    <mat-checkbox color="primary"> <span class="check-text">Evening</span></mat-checkbox>
+                    <div class="flex items-center">
+                        <button matRipple class="small-add-deduct-btn mr-3" (click)="add()">
+                            <svg width="12" height="2" viewBox="0 0 12 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.666992 1H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <span class="count">0</span>
+                        <button matRipple class="small-add-deduct-btn ml-3" (click)="deduct()">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 0.666992V11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                                <path d="M0.666992 6H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-between mb-3">
+                    <mat-checkbox color="primary"> <span class="check-text">Night</span></mat-checkbox>
+                    <div class="flex items-center">
+                        <button matRipple class="small-add-deduct-btn mr-3" (click)="add()">
+                            <svg width="12" height="2" viewBox="0 0 12 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.666992 1H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <span class="count">0</span>
+                        <button matRipple class="small-add-deduct-btn ml-3" (click)="deduct()">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 0.666992V11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                                <path d="M0.666992 6H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-between mb-3">
+                    <mat-checkbox color="primary"> <span class="check-text">IF necessary</span></mat-checkbox>
+                    <div class="flex items-center">
+                        <button matRipple class="small-add-deduct-btn mr-3" (click)="add()">
+                            <svg width="12" height="2" viewBox="0 0 12 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.666992 1H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <span class="count">0</span>
+                        <button matRipple class="small-add-deduct-btn ml-3" (click)="deduct()">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 0.666992V11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                                <path d="M0.666992 6H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-between mb-3">
+                    <mat-checkbox color="primary"> <span class="check-text">Every other day</span></mat-checkbox>
+                    <div class="flex items-center">
+                        <button matRipple class="small-add-deduct-btn mr-3" (click)="add()">
+                            <svg width="12" height="2" viewBox="0 0 12 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.666992 1H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <span class="count">0</span>
+                        <button matRipple class="small-add-deduct-btn ml-3" (click)="deduct()">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 0.666992V11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                                <path d="M0.666992 6H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <div class="line"></div>
+            <section>
+                <div class="pt-3 pr-3 inline-block">
+                    <button class="medicine-key">Before meals</button>
+                </div>
+                <div class="pt-3 pr-3 inline-block">
+                    <button class="medicine-key">After meals</button>
+                </div>
+                <div class="pt-3 pr-3 inline-block">
+                    <button class="medicine-key">With meals</button>
+                </div>
+                <div class="pt-3 pr-3 inline-block">
+                    <button class="medicine-key">Daily</button>
+                </div>
+                <div class="pt-3 pr-3 inline-block">
+                    <button class="medicine-key">Immediately</button>
+                </div>
+            </section>
+            <div class="line mt-3"></div>
+            <section class="mt-5 mb-5">
+                <div class="flex items-center">
+                    <button matRipple class="small-add-deduct-btn mr-5" (click)="add()">
+                        <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.666992 1H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <span class="count">1</span>
+                    <button matRipple class="small-add-deduct-btn ml-5" (click)="deduct()">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 0.666992V11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            <path d="M0.666992 6H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <p class="ml-5">at every time</p>
+                </div>
+            </section>
+            <div class="line mt-3"></div>
+            <section class="mt-5 mb-5">
+                <div class="flex items-center">
+                    <p class="mr-5">Every</p>
+                    <button matRipple class="small-add-deduct-btn mr-5" (click)="add()">
+                        <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.666992 1H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <span class="count">1</span>
+                    <button matRipple class="small-add-deduct-btn ml-5" (click)="deduct()">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 0.666992V11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                            <path d="M0.666992 6H11.3337" stroke="#2C3A42" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <p class="ml-5">hours</p>
+                </div>
+            </section>
+            <div class="line mt-3"></div>
+        </main>
+        <main *ngIf="data.mode === 'previousConcultation'">
+            <section class="grid grid-cols-4 gap-2 mt-2">
+                <div>
+                    <p class="header-title">Age</p>
+                    <p class="header-info">34 yrs</p>
+                </div>
+                <div>
+                    <p class="header-title">Type</p>
+                    <div class="header-info flex items-center">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.3327 5.16699L10.666 8.50033L15.3327 11.8337V5.16699Z" stroke="#2C3A42"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M9.33268 3.83301H1.99935C1.26297 3.83301 0.666016 4.42996 0.666016 5.16634V11.833C0.666016 12.5694 1.26297 13.1663 1.99935 13.1663H9.33268C10.0691 13.1663 10.666 12.5694 10.666 11.833V5.16634C10.666 4.42996 10.0691 3.83301 9.33268 3.83301Z"
+                                stroke="#2C3A42" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="ml-2">Video</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="header-title">Duration</p>
+                    <p class="header-info">12:59</p>
+                </div>
+                <div>
+                    <p class="header-title">Amount</p>
+                    <p class="header-info">LKR 500</p>
+                </div>
+            </section>
+            <section class="common-card p-3">
+                <header class="flex justify-between items-center">
+                    <h3 class="common-title">Medicationns</h3>
+                    <div class="flex items-center order-f">
+                        <p>Ordered form</p>
+                        <svg width="53" height="14" viewBox="0 0 53 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path
+                                    d="M10.5236 7.79895H10.1236H8.1989L9.09878 6.07418H9.49872C10.4236 6.07418 11.3485 5.47426 11.7984 4.62438L11.8734 4.4744L13.6232 0L0 9.87367H7.34901H8.27389C8.29888 9.87367 8.29888 9.87367 8.32388 9.87367C9.14877 9.84867 9.89867 9.34874 10.2236 8.54885L10.5236 7.79895Z"
+                                    fill="#E02E40" />
+                                <path
+                                    d="M16.2464 3.99902H15.3215C15.2965 3.99902 15.2965 3.99902 15.2715 3.99902C14.4467 4.02402 13.6968 4.52395 13.3718 5.32385L13.0718 6.09874H13.4718H15.3965L14.4967 7.79851H14.0967C13.1718 7.79851 12.247 8.39843 11.797 9.24832L11.722 9.3983L9.94727 13.8727L23.5704 3.99902H16.2464Z"
+                                    fill="#E02E40" />
+                            </g>
+                            <path
+                                d="M45.239 5.52478C45.064 5.3998 44.914 5.29981 44.7391 5.22482C44.5641 5.14983 44.4141 5.12483 44.2641 5.12483C44.0642 5.12483 43.9142 5.17483 43.7892 5.27481C43.6642 5.3748 43.6142 5.49978 43.6142 5.64976C43.6142 5.74975 43.6392 5.84973 43.7142 5.89973C43.7642 5.97472 43.8642 6.02471 43.9642 6.0747C44.0641 6.1247 44.1891 6.17469 44.3141 6.19969C44.4391 6.22468 44.5641 6.27468 44.6891 6.32467C45.189 6.49965 45.5389 6.69962 45.7889 6.99958C46.0139 7.27454 46.1389 7.64949 46.1389 8.07444C46.1389 8.37439 46.0889 8.64936 45.9889 8.89932C45.8889 9.14929 45.7389 9.34926 45.5389 9.52424C45.339 9.69922 45.114 9.8242 44.814 9.92419C44.5391 10.0242 44.2141 10.0742 43.8642 10.0742C43.1143 10.0742 42.4394 9.8492 41.8145 9.42425L42.4644 8.19942C42.6893 8.39939 42.9143 8.54937 43.1393 8.64936C43.3642 8.74934 43.5892 8.79934 43.7892 8.79934C44.0392 8.79934 44.2141 8.74934 44.3391 8.62436C44.4641 8.49938 44.5141 8.3744 44.5141 8.22442C44.5141 8.12443 44.4891 8.04944 44.4641 7.99945C44.4391 7.92446 44.3891 7.87446 44.3141 7.82447C44.2391 7.77448 44.1391 7.72448 44.0392 7.67449C43.9142 7.6245 43.7892 7.5745 43.6142 7.52451C43.4142 7.47452 43.2143 7.39953 43.0393 7.32454C42.8393 7.24955 42.6893 7.14956 42.5394 7.02458C42.3894 6.89959 42.2644 6.74961 42.1894 6.54964C42.0894 6.34967 42.0644 6.1247 42.0644 5.82474C42.0644 5.52478 42.1144 5.27481 42.2144 5.02485C42.3144 4.79988 42.4394 4.5999 42.6143 4.42493C42.7893 4.24995 42.9893 4.12497 43.2393 4.02498C43.4892 3.92499 43.7642 3.875 44.0891 3.875C44.3891 3.875 44.6891 3.92499 44.989 3.99998C45.314 4.07497 45.6139 4.19996 45.8889 4.34994L45.239 5.52478Z"
+                                fill="#2C3A42" />
+                            <path d="M34.516 8.57283H32.6912V4.02344H31.1914V9.87265H34.041L34.516 8.57283Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M30.1175 6.29813V6.27313H28.4428V5.29827H29.7926L30.2675 4.02344H26.918V9.87265H28.4428V7.57296H29.6176L30.1175 6.29813Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M50.7636 4.02344V6.27313H48.5639V4.02344H47.0391V9.87265H48.5639V7.44798H50.3136L50.7636 6.27313V7.44798V9.87265H52.2884V4.02344H50.7636Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M38.8917 4.02344H37.2169L34.9922 9.87265H36.617L36.9669 8.84779H38.2917L38.7417 7.69794H37.3669L38.0418 5.74821L38.7417 7.69794L39.1416 8.84779L39.4916 9.87265H41.1164L38.8917 4.02344Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M27.1953 12.1978H27.9202V11.5479H28.1701V13.2226H27.9202V12.4477H27.1953V13.2226H26.9453V11.5479H27.1953V12.1978Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M30.7725 11.773H30.0976V12.173H30.7475V12.3979H30.0976V12.9479H30.7725V13.1728H29.8477V11.498H30.7725V11.773Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M33.394 12.7967H32.6941L32.5191 13.1966H32.2441L33.069 11.4219L33.8689 13.1966H33.594L33.394 12.7967ZM33.294 12.5717L33.044 11.9968L32.7941 12.5717H33.294Z"
+                                fill="#2C3A42" />
+                            <path d="M35.6211 11.5465V12.9713H36.121V13.1963H35.3711V11.5215H35.6211V11.5465Z"
+                                fill="#2C3A42" />
+                            <path d="M37.9941 11.7728V13.1976H37.7441V11.7728H37.3691V11.5479H38.394V11.7728H37.9941Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M40.1465 12.1978H40.8714V11.5479H41.1213V13.2226H40.8714V12.4477H40.1465V13.2226H39.8965V11.5479H40.1465V12.1978Z"
+                                fill="#2C3A42" />
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="23.662" height="14" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </header>
+                <main>
+                    <div class="medicine-div">
+                        <p class="name">Amoxicillin 250mg</p>
+                        <p class="info">1 Morning, before meals, 3 day</p>
+                    </div>
+                    <div class="medicine-div">
+                        <p class="name">Amoxicillin 250mg</p>
+                        <p class="info">1 Morning, before meals, 3 day</p>
+                    </div>
+                </main>
+            </section>
+            <section class="common-card p-3">
+                <header class="flex justify-between items-center">
+                    <h3 class="common-title">Medicationns</h3>
+                    <div class="flex items-center order-f">
+                        <p>Ordered form</p>
+                        <svg width="53" height="14" viewBox="0 0 53 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path
+                                    d="M10.5236 7.79895H10.1236H8.1989L9.09878 6.07418H9.49872C10.4236 6.07418 11.3485 5.47426 11.7984 4.62438L11.8734 4.4744L13.6232 0L0 9.87367H7.34901H8.27389C8.29888 9.87367 8.29888 9.87367 8.32388 9.87367C9.14877 9.84867 9.89867 9.34874 10.2236 8.54885L10.5236 7.79895Z"
+                                    fill="#E02E40" />
+                                <path
+                                    d="M16.2464 3.99902H15.3215C15.2965 3.99902 15.2965 3.99902 15.2715 3.99902C14.4467 4.02402 13.6968 4.52395 13.3718 5.32385L13.0718 6.09874H13.4718H15.3965L14.4967 7.79851H14.0967C13.1718 7.79851 12.247 8.39843 11.797 9.24832L11.722 9.3983L9.94727 13.8727L23.5704 3.99902H16.2464Z"
+                                    fill="#E02E40" />
+                            </g>
+                            <path
+                                d="M45.239 5.52478C45.064 5.3998 44.914 5.29981 44.7391 5.22482C44.5641 5.14983 44.4141 5.12483 44.2641 5.12483C44.0642 5.12483 43.9142 5.17483 43.7892 5.27481C43.6642 5.3748 43.6142 5.49978 43.6142 5.64976C43.6142 5.74975 43.6392 5.84973 43.7142 5.89973C43.7642 5.97472 43.8642 6.02471 43.9642 6.0747C44.0641 6.1247 44.1891 6.17469 44.3141 6.19969C44.4391 6.22468 44.5641 6.27468 44.6891 6.32467C45.189 6.49965 45.5389 6.69962 45.7889 6.99958C46.0139 7.27454 46.1389 7.64949 46.1389 8.07444C46.1389 8.37439 46.0889 8.64936 45.9889 8.89932C45.8889 9.14929 45.7389 9.34926 45.5389 9.52424C45.339 9.69922 45.114 9.8242 44.814 9.92419C44.5391 10.0242 44.2141 10.0742 43.8642 10.0742C43.1143 10.0742 42.4394 9.8492 41.8145 9.42425L42.4644 8.19942C42.6893 8.39939 42.9143 8.54937 43.1393 8.64936C43.3642 8.74934 43.5892 8.79934 43.7892 8.79934C44.0392 8.79934 44.2141 8.74934 44.3391 8.62436C44.4641 8.49938 44.5141 8.3744 44.5141 8.22442C44.5141 8.12443 44.4891 8.04944 44.4641 7.99945C44.4391 7.92446 44.3891 7.87446 44.3141 7.82447C44.2391 7.77448 44.1391 7.72448 44.0392 7.67449C43.9142 7.6245 43.7892 7.5745 43.6142 7.52451C43.4142 7.47452 43.2143 7.39953 43.0393 7.32454C42.8393 7.24955 42.6893 7.14956 42.5394 7.02458C42.3894 6.89959 42.2644 6.74961 42.1894 6.54964C42.0894 6.34967 42.0644 6.1247 42.0644 5.82474C42.0644 5.52478 42.1144 5.27481 42.2144 5.02485C42.3144 4.79988 42.4394 4.5999 42.6143 4.42493C42.7893 4.24995 42.9893 4.12497 43.2393 4.02498C43.4892 3.92499 43.7642 3.875 44.0891 3.875C44.3891 3.875 44.6891 3.92499 44.989 3.99998C45.314 4.07497 45.6139 4.19996 45.8889 4.34994L45.239 5.52478Z"
+                                fill="#2C3A42" />
+                            <path d="M34.516 8.57283H32.6912V4.02344H31.1914V9.87265H34.041L34.516 8.57283Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M30.1175 6.29813V6.27313H28.4428V5.29827H29.7926L30.2675 4.02344H26.918V9.87265H28.4428V7.57296H29.6176L30.1175 6.29813Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M50.7636 4.02344V6.27313H48.5639V4.02344H47.0391V9.87265H48.5639V7.44798H50.3136L50.7636 6.27313V7.44798V9.87265H52.2884V4.02344H50.7636Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M38.8917 4.02344H37.2169L34.9922 9.87265H36.617L36.9669 8.84779H38.2917L38.7417 7.69794H37.3669L38.0418 5.74821L38.7417 7.69794L39.1416 8.84779L39.4916 9.87265H41.1164L38.8917 4.02344Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M27.1953 12.1978H27.9202V11.5479H28.1701V13.2226H27.9202V12.4477H27.1953V13.2226H26.9453V11.5479H27.1953V12.1978Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M30.7725 11.773H30.0976V12.173H30.7475V12.3979H30.0976V12.9479H30.7725V13.1728H29.8477V11.498H30.7725V11.773Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M33.394 12.7967H32.6941L32.5191 13.1966H32.2441L33.069 11.4219L33.8689 13.1966H33.594L33.394 12.7967ZM33.294 12.5717L33.044 11.9968L32.7941 12.5717H33.294Z"
+                                fill="#2C3A42" />
+                            <path d="M35.6211 11.5465V12.9713H36.121V13.1963H35.3711V11.5215H35.6211V11.5465Z"
+                                fill="#2C3A42" />
+                            <path d="M37.9941 11.7728V13.1976H37.7441V11.7728H37.3691V11.5479H38.394V11.7728H37.9941Z"
+                                fill="#2C3A42" />
+                            <path
+                                d="M40.1465 12.1978H40.8714V11.5479H41.1213V13.2226H40.8714V12.4477H40.1465V13.2226H39.8965V11.5479H40.1465V12.1978Z"
+                                fill="#2C3A42" />
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="23.662" height="14" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </header>
+                <main>
+                    <p class="other-notes">CRP</p>
+                    <p class="other-notes">Dengue Antigen</p>
+                    <p class="other-notes">Full Blood Count</p>
+                </main>
+            </section>
+            <section class="common-card p-3">
+                <header>
+                    <h3 class="common-title">Other Notes</h3>
+                </header>
+                <main>
+                    <p class="other-notes">meet me after 2 weeks with the tests</p>
+                </main>
+            </section>
+        </main>
+
+    </mat-dialog-content>
+    <mat-dialog-actions *ngIf="data.mode !='previousConcultation'" align="end" class="dialog_btns">
+        <button mat-raised-button class="save-btn">
+            Save
+        </button>
+    </mat-dialog-actions>
+</section>

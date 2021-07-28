@@ -1,0 +1,78 @@
+<section class="w-full call-end">
+    <div class="end-wrapper">
+        <section class="top-back-full flex items-center justify-between pt-8 mb-9">
+            <h2 (click)="back()" class="back-title flex items-center">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 18L1.51472 9.51472L10 1.02944" stroke="#2C3A42" stroke-width="2" />
+                </svg>
+                <span>
+                    Back
+                </span>
+            </h2>
+        </section>
+        <section class="grid sm:grid-cols-3 grid-cols-1 gap-4">
+            <div class="flex items-center patient-img-name">
+                <img class="patient-img" src="assets/img/IMG_p.jpg">
+                <p class="patient-name">Syril Perera</p>
+            </div>
+            <div class="sm:col-span-2 flex">
+                <div class="calling-info mr-3">
+                    <p class="call-title">Age</p>
+                    <p class="call-info">34 yrs</p>
+                </div>
+                <div class="calling-info mr-3">
+                    <p class="call-title">Date</p>
+                    <p class="call-info">May 26th</p>
+                </div>
+                <div class="calling-info mr-3">
+                    <p class="call-title">Type</p>
+                    <div class="call-info flex items-center">
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.3337 5.16699L10.667 8.50033L15.3337 11.8337V5.16699Z" stroke="#2C3A42"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M9.33366 3.83301H2.00033C1.26395 3.83301 0.666992 4.42996 0.666992 5.16634V11.833C0.666992 12.5694 1.26395 13.1663 2.00033 13.1663H9.33366C10.07 13.1663 10.667 12.5694 10.667 11.833V5.16634C10.667 4.42996 10.07 3.83301 9.33366 3.83301Z"
+                                stroke="#2C3A42" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="ml-2">Video</p>
+                    </div>
+                </div>
+                <div class="calling-info mr-3">
+                    <p class="call-title">Duration</p>
+                    <p class="call-info">12:59</p>
+                </div>
+                <div class="calling-info mr-3">
+                    <p class="call-title">Amount</p>
+                    <p class="call-info">LKR 500</p>
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-cols-3 gap-4 mt-8">
+            <div>
+                <div routerLink="madication" class="left-tab flex justify-between items-center cursor-pointer">
+                    <p>Medications</p>
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                </div>
+                <div routerLink='lab-test' class="left-tab flex justify-between items-center cursor-pointer">
+                    <p>Lab tests</p>
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                </div>
+                <div routerLink='diagnosys' class="left-tab flex justify-between items-center cursor-pointer">
+                    <p>Diagnosys</p>
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                </div>
+                <div routerLink="notes" class="left-tab flex justify-between items-center cursor-pointer">
+                    <p>Notes</p>
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                </div>
+            </div>
+            <div class="col-span-2">
+                <div class="flex justify-between items-center">
+                    <div class="w-full right-tab-content">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

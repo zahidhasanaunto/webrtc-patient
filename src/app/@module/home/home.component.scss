@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+p,
+a,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+section,
+main,
+div {
+	font-family: 'Inter', sans-serif;
+}
+$color: #2c3a42;
+
+header {
+	background: white;
+	border-radius: 4px;
+}
+
+.walet-text {
+	color: $color;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.common-style {
+	background: #fff;
+	border-radius: 8px;
+}

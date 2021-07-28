@@ -1,0 +1,32 @@
+@import '../../../../mediaQuery.scss';
+
+.popup-section {
+	width: 420px;
+	@include responsive(_phone) {
+		width: 67vw;
+	}
+}
+
+.btn-done {
+	background: #2c3a42;
+	color: white;
+}
+
+input {
+	border: 1px solid #bbc4ca;
+	box-sizing: border-box;
+	border-radius: 6px;
+	&:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+		box-sizing: border-box;
+		box-shadow: 0px 3px 6px rgba(224, 46, 64, 0.2);
+	}
+	&:active {
+		outline: none;
+		box-sizing: border-box;
+		box-shadow: 0px 3px 6px rgba(224, 46, 64, 0.2);
+	}
+}
